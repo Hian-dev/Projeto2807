@@ -1,0 +1,1578 @@
+/*==================================================
+UNI VITÓRIA TEC
+CURSOS.CSS
+PARTE 1
+==================================================*/
+
+/*=========================
+RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#F5F8FC;
+
+    color:#1F2A44;
+
+    overflow-x:hidden;
+
+    line-height:1.6;
+
+}
+
+/*=========================
+VARIÁVEIS
+=========================*/
+
+:root{
+
+    --azul:#0057B8;
+
+    --azul-claro:#0A8DFF;
+
+    --azul-hover:#00479B;
+
+    --branco:#FFFFFF;
+
+    --cinza:#F5F8FC;
+
+    --cinza2:#EEF2F7;
+
+    --texto:#24324A;
+
+    --texto-claro:#5E6D82;
+
+    --verde:#28C76F;
+
+    --radius:18px;
+
+    --shadow:
+
+        0 10px 35px rgba(0,0,0,.08);
+
+    --transition:.35s;
+
+}
+
+/*=========================
+CONTAINER
+=========================*/
+
+.container{
+
+    width:min(1320px,92%);
+
+    margin:auto;
+
+}
+
+/*=========================
+HEADER
+=========================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    background:#ffffff;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 5px 18px rgba(0,0,0,.05);
+
+}
+
+header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+/*=========================
+LOGO
+=========================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+
+}
+
+.logo img{
+
+    height:56px;
+
+}
+
+.logo span{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:var(--azul);
+
+}
+
+/*=========================
+MENU
+=========================*/
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:var(--texto);
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:20px;
+
+    background:var(--azul);
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--azul);
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/*=========================
+BOTÃO
+=========================*/
+
+.btn{
+
+    background:linear-gradient(
+
+        135deg,
+
+        var(--azul),
+
+        var(--azul-claro)
+
+    );
+
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:16px 32px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:
+
+        0 10px 30px rgba(0,87,184,.28);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 18px 45px rgba(0,87,184,.35);
+
+}
+
+/*=========================
+HERO
+=========================*/
+
+.hero{
+
+    padding-top:170px;
+
+    padding-bottom:100px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #F9FBFF,
+
+        #EDF5FF
+
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    background:
+
+    radial-gradient(
+
+        rgba(10,141,255,.12),
+
+        transparent 70%
+
+    );
+
+    right:-150px;
+
+    top:-150px;
+
+}
+
+.hero span{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:#EAF4FF;
+
+    color:var(--azul);
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+    line-height:1.1;
+
+    color:var(--texto);
+
+    max-width:760px;
+
+    margin-bottom:30px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    color:var(--texto-claro);
+
+    max-width:650px;
+
+}
+
+/*=========================
+ÁREAS
+=========================*/
+
+.areas{
+
+    padding:70px 0;
+
+}
+
+.areas h2{
+
+    font-size:42px;
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+    color:var(--texto);
+
+}
+
+/*=========================
+BUSCA
+=========================*/
+
+.search-box{
+
+    max-width:720px;
+
+    margin:0 auto;
+
+    position:relative;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:18px 25px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:60px;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+    font-size:17px;
+
+    transition:.35s;
+
+}
+
+.search-box input:focus{
+
+    box-shadow:
+
+    0 0 0 4px rgba(0,87,184,.15),
+
+    var(--shadow);
+
+}
+
+/*=========================
+SEÇÕES
+=========================*/
+
+.categoria{
+
+    padding:60px 0;
+
+}
+
+.categoria h2{
+
+    font-size:34px;
+
+    color:var(--texto);
+
+    margin-bottom:35px;
+
+}
+
+/*=========================
+ANIMAÇÃO
+=========================*/
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:1s;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*=========================
+SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#EDF3FB;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--azul);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00479B;
+
+}
+
+
+
+
+/*==================================================
+UNI VITÓRIA TEC
+CURSOS.CSS
+PARTE 2
+CARDS DOS CURSOS
+==================================================*/
+
+/*=========================
+GRID DOS CURSOS
+=========================*/
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+/*=========================
+CARD
+=========================*/
+
+.card-curso{
+
+    position:relative;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 10px 35px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+}
+
+.card-curso:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+
+    0 22px 55px rgba(0,87,184,.18);
+
+}
+
+/*=========================
+EFEITO SUPERIOR
+=========================*/
+
+.card-curso::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    #0057B8,
+
+    #0A8DFF
+
+    );
+
+}
+
+/*=========================
+EFEITO DE BRILHO
+=========================*/
+
+.card-curso::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-50%;
+
+    width:80%;
+
+    height:250%;
+
+    background:
+
+    linear-gradient(
+
+    rgba(255,255,255,0),
+
+    rgba(255,255,255,.35),
+
+    rgba(255,255,255,0)
+
+    );
+
+    transform:rotate(30deg);
+
+    transition:.8s;
+
+}
+
+.card-curso:hover::after{
+
+    top:-20%;
+
+    left:120%;
+
+}
+
+/*=========================
+ÍCONE
+=========================*/
+
+.card-icon{
+
+    width:82px;
+
+    height:82px;
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #0057B8,
+
+    #0A8DFF
+
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:30px auto 20px;
+
+    box-shadow:
+
+    0 12px 25px rgba(0,87,184,.25);
+
+}
+
+.card-icon img{
+
+    width:42px;
+
+}
+
+/*=========================
+TÍTULO
+=========================*/
+
+.card-curso h3{
+
+    font-size:21px;
+
+    color:#1E2B46;
+
+    text-align:center;
+
+    padding:0 18px;
+
+    min-height:65px;
+
+}
+
+/*=========================
+DESCRIÇÃO
+=========================*/
+
+.card-curso p{
+
+    color:#65748B;
+
+    text-align:center;
+
+    font-size:15px;
+
+    padding:18px 24px;
+
+    line-height:1.6;
+
+}
+
+/*=========================
+BADGE
+=========================*/
+
+.badge{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:8px 18px;
+
+    background:#EAF4FF;
+
+    color:#0057B8;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    border-radius:30px;
+
+    margin:0 auto;
+
+}
+
+/*=========================
+RODAPÉ CARD
+=========================*/
+
+.card-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px;
+
+}
+
+/*=========================
+BOTÃO
+=========================*/
+
+.card-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #0057B8,
+
+    #0A8DFF
+
+    );
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.card-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+    0 12px 30px rgba(0,87,184,.25);
+
+}
+
+/*=========================
+TAG MEC
+=========================*/
+
+.tag-mec{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#28C76F;
+
+    color:#fff;
+
+    font-size:12px;
+
+    padding:7px 12px;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+}
+
+/*=========================
+HOVER DO TEXTO
+=========================*/
+
+.card-curso:hover h3{
+
+    color:#0057B8;
+
+}
+
+/*=========================
+ANIMAÇÃO
+=========================*/
+
+.card-curso{
+
+    animation:fadeCard .6s ease;
+
+}
+
+@keyframes fadeCard{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================
+IMAGEM
+=========================*/
+
+.card-image{
+
+    width:100%;
+
+    height:180px;
+
+    overflow:hidden;
+
+}
+
+.card-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.card-curso:hover .card-image img{
+
+    transform:scale(1.08);
+
+}
+
+/*=========================
+STATUS
+=========================*/
+
+.status{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-bottom:18px;
+
+    color:#28C76F;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.status::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#28C76F;
+
+}
+
+/*=========================
+GLASS
+=========================*/
+
+.glass{
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(14px);
+
+}
+
+/*=========================
+EFEITO AO PASSAR
+=========================*/
+
+.card-curso:hover{
+
+    border:1px solid rgba(10,141,255,.25);
+
+}
+
+/*=========================
+BOTÃO FLUTUANTE
+=========================*/
+
+.card-action{
+
+    position:absolute;
+
+    bottom:22px;
+
+    right:22px;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#0057B8;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.card-curso:hover .card-action{
+
+    opacity:1;
+
+}
+
+
+
+
+
+
+/*==================================================
+UNI VITÓRIA TEC
+CURSOS.CSS
+PARTE 3
+==================================================*/
+
+/*=========================
+CTA
+=========================*/
+
+.cta{
+
+    padding:100px 0;
+
+    background:linear-gradient(
+        135deg,
+        #0057B8,
+        #0A8DFF
+    );
+
+    color:#fff;
+
+    text-align:center;
+
+}
+
+.cta h2{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    font-size:20px;
+
+    opacity:.95;
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-bottom:40px;
+
+}
+
+.cta .btn{
+
+    background:#fff;
+
+    color:#0057B8;
+
+}
+
+.cta .btn:hover{
+
+    background:#F4F8FF;
+
+}
+
+/*=========================
+FOOTER
+=========================*/
+
+footer{
+
+    background:#0D1B2A;
+
+    color:#D6E2F5;
+
+    padding:70px 0 30px;
+
+}
+
+footer .container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:40px;
+
+}
+
+footer h3{
+
+    color:#fff;
+
+    margin-bottom:18px;
+
+}
+
+footer a{
+
+    color:#D6E2F5;
+
+    text-decoration:none;
+
+    display:block;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:#0A8DFF;
+
+    padding-left:6px;
+
+}
+
+.footer-copy{
+
+    margin-top:50px;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    padding-top:25px;
+
+    text-align:center;
+
+    font-size:14px;
+
+}
+
+/*=========================
+BOTÃO WHATSAPP
+=========================*/
+
+.whatsapp{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+
+    0 12px 35px rgba(37,211,102,.35);
+
+    z-index:999;
+
+    transition:.35s;
+
+}
+
+.whatsapp:hover{
+
+    transform:scale(1.12);
+
+}
+
+/*=========================
+BOTÃO TOPO
+=========================*/
+
+.btn-topo{
+
+    position:fixed;
+
+    left:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#0057B8;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+.btn-topo.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/*=========================
+LOADER
+=========================*/
+
+.loader{
+
+    display:none;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    border:5px solid #E8EDF5;
+
+    border-top:5px solid #0057B8;
+
+    animation:girar .8s linear infinite;
+
+    margin:auto;
+
+}
+
+@keyframes girar{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*=========================
+SKELETON
+=========================*/
+
+.skeleton{
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    #ECECEC,
+
+    #F8F8F8,
+
+    #ECECEC
+
+    );
+
+    background-size:200%;
+
+    animation:skeleton 1.5s infinite;
+
+}
+
+@keyframes skeleton{
+
+    from{
+
+        background-position:200%;
+
+    }
+
+    to{
+
+        background-position:-200%;
+
+    }
+
+}
+
+/*=========================
+FOCUS
+=========================*/
+
+button:focus,
+
+input:focus,
+
+select:focus,
+
+textarea:focus{
+
+    outline:none;
+
+    box-shadow:
+
+    0 0 0 4px rgba(0,87,184,.18);
+
+}
+
+/*=========================
+SELEÇÃO
+=========================*/
+
+::selection{
+
+    background:#0057B8;
+
+    color:#fff;
+
+}
+
+/*=========================
+RESPONSIVO
+=========================*/
+
+@media(max-width:1200px){
+
+.cards{
+
+grid-template-columns:
+repeat(4,1fr);
+
+}
+
+}
+
+@media(max-width:992px){
+
+header .container{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:46px;
+
+}
+
+.cards{
+
+grid-template-columns:
+repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+display:none;
+
+}
+
+.hero{
+
+padding-top:140px;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.categoria h2{
+
+font-size:30px;
+
+}
+
+.cards{
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:20px;
+
+}
+
+.card-curso{
+
+border-radius:18px;
+
+}
+
+.cta{
+
+padding:70px 0;
+
+}
+
+.cta h2{
+
+font-size:34px;
+
+}
+
+.cta p{
+
+font-size:17px;
+
+}
+
+footer .container{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:560px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.hero span{
+
+font-size:13px;
+
+}
+
+.search-box input{
+
+font-size:15px;
+
+padding:16px 20px;
+
+}
+
+.btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.card-image{
+
+height:200px;
+
+}
+
+}
+
+/*=========================
+ANIMAÇÕES
+=========================*/
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:.8s;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.fade-left{
+
+opacity:0;
+
+transform:translateX(-40px);
+
+transition:.8s;
+
+}
+
+.fade-left.show{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+.fade-right{
+
+opacity:0;
+
+transform:translateX(40px);
+
+transition:.8s;
+
+}
+
+.fade-right.show{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+/*=========================
+HOVER LINKS
+=========================*/
+
+a{
+
+transition:.3s;
+
+}
+
+/*=========================
+IMAGENS
+=========================*/
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+/*=========================
+FIM
+=========================*/
